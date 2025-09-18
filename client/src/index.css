@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,13 +31,27 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+h2{
+  font-size: 2em;
+}
+h3{
+  font-size: 1em;
 }
 
 button {
@@ -67,14 +86,42 @@ button:focus-visible {
   }
 }
 .search-area {
-  margin: 0 100px;
+  padding:25px 40px 10px 20px;
+  margin-bottom: 50px;
 }
 
-.search-area input{
-  width: 100%;
-  padding: 10px 20px;
+.search-area.scrolled {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-input{
+  width: 90%;
+  padding: 10px 30px;
   border-radius: 20px;
   font-size: 15px;
+  border: #1a1a1a solid 2px;
+  position: fixed;
+  top: 25px;
+  left: 50px;
+    box-shadow: rgba(161, 161, 214, 0.859) 0px 7px 20px 0px;
+}
+
+.search-icon{
+  position: fixed;
+    left: 60px;
+    z-index: 10000;
+    top:40px;
+
+}
+
+.search-movie-img{
+  width: 70% !important;
+}
+
+.mt-50{
+  margin-top:50px;
 }
 
 .index{
@@ -85,4 +132,56 @@ button:focus-visible {
 .movies{
   display: flex;
   justify-content: center;
+}
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 300px;
+  max-height: 100vh;
+}
+
+.searched-movie-img{
+  width: 100%;
+}
+
+.movie-area{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-color{
+background: #0f0f47;
+background: linear-gradient(180deg, rgba(15, 15, 71, 1) 0%, rgba(25, 25, 110, 1) 11%, rgba(45, 45, 189, 1) 20%, rgba(33, 33, 130, 1) 31%, rgba(21, 21, 87, 1) 42%, rgba(39, 39, 161, 1) 51%, rgba(48, 48, 199, 1) 62%, rgba(10, 10, 77, 1) 72%, rgba(28, 28, 163, 1) 85%, rgba(18, 18, 99, 1) 99%);
+}
+
+.body-color2{
+  background-color: rgba(25, 25, 110, 1) ;
+}
+.movie-img{
+  margin-bottom:10px;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 80%;
+  margin-top:15px;
+  min-height:355px;
+}
+.movie-img:hover {
+  transform: scale(1.05); /* hover ile hafif büyütme */
+  box-shadow: rgba(161, 161, 214, 0.859) 0px 7px 20px 0px;
+}
+
+text-light{
+color: white !important;  
+}
+
+.margin-left{
+  margin-left: 30px;
 }
