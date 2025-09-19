@@ -9,3 +9,6 @@
 #### MongoDB → Film verilerinin ve embedding’lerin saklanması 
 #### OpenAI Embeddings API → Kullanıcı aramalarını anlamlı vektörlere dönüştürme 
 #### Cosine Similarity → Kullanıcı araması ile film embeddingleri arasındaki benzerliği hesaplama
+
+
+#### Demo: https://lnkd.in/p/dfrJdA_x
